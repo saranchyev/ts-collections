@@ -1,0 +1,30 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "tsconfigRootDir": "."
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "rules": {
+    "camelcase": "error",
+    "semi": ["error", "always"], // всегда требовать точку с запятой
+    "semi-spacing": ["error", {"before": false, "after": true}], // перед точкой с запятой не должно быть пробелов, после нее мдолжны быть пробелы
+    "no-console": "warn", // выдавать предупреждения на использование console
+    "@typescript-eslint/array-type": "error", // Требуется использование либо T[]или Array<T>для массивов
+    "@typescript-eslint/explicit-function-return-type": "error", // Требовать явных возвращаемых типов для функций и методов класса
+    "@typescript-eslint/explicit-member-accessibility": "error" // Требовать явных модификаторов доступа к свойствам и методам класса
+  }
+}
