@@ -20,11 +20,25 @@
   ],
   "rules": {
     "camelcase": "error",
+    "no-multi-spaces": "error",
     "semi": ["error", "always"], // всегда требовать точку с запятой
     "semi-spacing": ["error", {"before": false, "after": true}], // перед точкой с запятой не должно быть пробелов, после нее мдолжны быть пробелы
+    "prefer-const": "off", // не ругаться на переменные, объявленные через let и не разу не изменявшиеся
     "no-console": "warn", // выдавать предупреждения на использование console
+    "@typescript-eslint/no-inferrable-types": "off", // не ругаться на объявление переменных, которым явно указывается тип и тут же присваивается значение (_count: number = 0)
     "@typescript-eslint/array-type": "error", // Требуется использование либо T[]или Array<T>для массивов
     "@typescript-eslint/explicit-function-return-type": "error", // Требовать явных возвращаемых типов для функций и методов класса
-    "@typescript-eslint/explicit-member-accessibility": "error" // Требовать явных модификаторов доступа к свойствам и методам класса
+    "@typescript-eslint/explicit-member-accessibility": "error", // Требовать явных модификаторов доступа к свойствам и методам класса
+    "@typescript-eslint/type-annotation-spacing": "error", // Требовать одинакового интервала вокруг аннотаций типа
+    "@typescript-eslint/typedef": ["error", {// Требуется, чтобы аннотации типов существовали
+      "arrayDestructuring": false, // при деструктуризации массива
+      "arrowParameter": false, // у стрелочных функций
+      "memberVariableDeclaration": true, // у свойств объектов и классов
+      "objectDestructuring": false, // при деструктуризации объектов
+      "parameter": true, // у параметров функций и методов
+      "propertyDeclaration": true, // при объявлении типов
+      "variableDeclaration": true, // при объявлении переменных
+      "variableDeclarationIgnoreFunction": false
+    }]
   }
 }
