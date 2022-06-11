@@ -10,7 +10,7 @@
  * [v] * AddRange(collection) - Добавляет элементы указанной коллекции в конец списка List<T>.
  * [ ] * AsReadOnly() - Возвращает для текущей коллекции оболочку ReadOnlyCollection<T>, доступную только для чтения.
  * [ ]   BinarySearch(...) - Использует алгоритм двоичного поиска для нахождения определенного элемента в отсортированном списке List<T> или в его части.
- * [ ] * Clear() - Удаляет из коллекции List<T> все элементы.
+ * [v] * Clear() - Удаляет из коллекции List<T> все элементы.
  * [v] * Contains(item) - Определяет, входит ли элемент в коллекцию List<T>.
  * [ ]   ConvertAll(converter) - Преобразует элементы текущего списка List<T> в другой тип и возвращает список преобразованных элементов.
  * [ ]   CopyTo(...) - Копирует список List<T> или его часть в массив.
@@ -18,19 +18,19 @@
  * [ ] * Exists(predicate) - Определяет, содержит ли List<T> элементы, удовлетворяющие условиям указанного предиката.
  * [ ] * Find(predicate) - Выполняет поиск элемента, удовлетворяющего условиям указанного предиката, и возвращает первое найденное вхождение в пределах всего списка List<T>.
  * [ ] * FindAll(predicate) - Извлекает все элементы, удовлетворяющие условиям указанного предиката.
- * [ ]   FindIndex(from, to, predicate) - Выполняет поиск элемента, удовлетворяющего условиям указанного предиката, и возвращает отсчитываемый от нуля индекс первого найденного вхождения в пределах всего списка List<T> или его части.
+ * [ ] * FindIndex(from, to, predicate) - Выполняет поиск элемента, удовлетворяющего условиям указанного предиката, и возвращает отсчитываемый от нуля индекс первого найденного вхождения в пределах всего списка List<T> или его части.
  * [ ]   FindLast(predicate) - Выполняет поиск элемента, удовлетворяющего условиям указанного предиката, и возвращает последнее найденное вхождение в пределах всего списка List<T>.
- * [ ]   FindLastIndex(from, to, predicate) - Выполняет поиск элемента, удовлетворяющего условиям указанного предиката, и возвращает последнее найденное вхождение в пределах всего списка List<T>.
+ * [ ] * FindLastIndex(from, to, predicate) - Выполняет поиск элемента, удовлетворяющего условиям указанного предиката, и возвращает последнее найденное вхождение в пределах всего списка List<T>.
  * [ ] * ForEach(Action<T>) - Выполняет указанное действие с каждым элементом списка List<T>.
  * [v] * GetRange(from, to) - Создает неполную копию диапазона элементов исходного списка List<T>.
  * [ ] * IndexOf(item, from, to) - Возвращает отсчитываемый от нуля индекс первого вхождения значения в списке List<T> или в его части.
  * [v] * Insert(position, item) - Вставляет элемент в коллекцию List<T> по указанному индексу.
  * [v] * InsertRange(position, items) - Вставляет элементы коллекции в список List<T> в позиции с указанным индексом.
  * [ ] * LastIndexOf(item, from, to) - Возвращает отсчитываемый от нуля индекс последнего вхождения значения в списке List<T> или в его части.
- * [ ] * Remove(item) - Удаляет первое вхождение указанного объекта из коллекции List<T>.
- * [ ] * RemoveAll(predicate) - Удаляет все элементы, удовлетворяющие условиям указанного предиката.
- * [ ] * RemoveAt(index) - Удаляет элемент списка List<T> с указанным индексом.
- * [ ] * RemoveRange(index, count) - Удаляет диапазон элементов из списка List<T>.
+ * [v] * Remove(item) - Удаляет первое вхождение указанного объекта из коллекции List<T>.
+ * [v] * RemoveAll(predicate) - Удаляет все элементы, удовлетворяющие условиям указанного предиката.
+ * [v] * RemoveAt(index) - Удаляет элемент списка List<T> с указанным индексом.
+ * [v] * RemoveRange(index, count) - Удаляет диапазон элементов из списка List<T>.
  * [ ] * Reverse() - Изменяет порядок элементов в списке List<T> или в его части на обратный.
  * [ ] * Sort(comparer, [from, to]) - Сортирует элементы или части элементов в списке List<T> с использованием заданного значения или значения по умолчанию IComparer<T> реализации или предоставленного делегата Comparison<T> для сравнения элементов списка.
  * [ ] * ToArray() - Копирует элементы списка List<T> в новый массив.
@@ -58,15 +58,15 @@
  * [ ]   flat(depth) - возвращает новый массив, в котором все элементы вложенных подмассивов были рекурсивно "подняты" на указанный уровень depth.
  * [ ]   flatMap(predicate) - сначала применяет функцию к каждому элементу, а затем преобразует полученный результат в плоскую структуру и помещает в новый массив
  * [ ] * forEach(predicate) - выполняет указанную функцию один раз для каждого элемента в массиве
- * [ ]   from(iterable[, forEachPredicate]) - создаёт новый экземпляр Array из массивоподобного или итерируемого объекта.
+ * [v] * from(iterable[, forEachPredicate]) - создаёт новый экземпляр Array из массивоподобного или итерируемого объекта.
  * [ ]   groupBy(predicate) - возвращает объект, в котором элементы массива сгруппиованны согласно разультату работы предиката
  * [ ]   groupByToMap
- * [ ] * includes(item[, fromIndex]) - определяет, содержит ли массив определённый элемент, возвращая в зависимости от этого true или false
+ * [v] * includes(item[, fromIndex]) - определяет, содержит ли массив определённый элемент, возвращая в зависимости от этого true или false
  * [ ] * indexOf(item[, fromIndex]) - возвращает первый индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет.
  * [ ]   isArray(obj) - возвращает true, если объект является массивом и false, если он массивом не является.
  * [ ] * join(glue) - объединяет все элементы массива (или массивоподобного объекта) в строку
  * [ ] * keys() - возвращает новый итератор массива Array Iterator, содержащий ключи каждого индекса в массиве.
- * [ ]   lastIndexOf(item, fromIndex) - озвращает последний индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет.
+ * [ ] * lastIndexOf(item, fromIndex) - озвращает последний индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет.
  * [ ] * map(predicate) - создаёт новый массив с результатом вызова указанной функции для каждого элемента массива.
  * [ ]   of(...items) - создаёт новый экземпляр массива Array из произвольного числа аргументов, вне зависимости от числа или типа аргумента
  * [ ]   pop
@@ -89,9 +89,11 @@
  */
 
 
+import {Comparer, Predicate} from "../ArrowTypes";
+
 export default class List<T> implements Iterable<T>
 {
-    private readonly items: T[];
+    private items: T[];
 
 
     /**
@@ -124,20 +126,20 @@ export default class List<T> implements Iterable<T>
     /**
      * Add multiple items to the end of a listAdd multiple items to the end of a list
      * @param {Iterable} items
+     * @throws RangeError - If `items` is not iterable
      */
     public addRange(items: Iterable<T>): void {
         if (!items[Symbol.iterator]) {
             throw new RangeError('Argument "items" must be iterable');
         }
         this.items.push(...items);
-        //this.insertRange(this.items.length, items);
     }
 
 
     /**
      * Get element by index
      * @param {number} index
-     * @throws RangeError - If index less than 0 or greater then the length of the list
+     * @throws RangeError - If `index` less than 0 or greater then the length of the list
      */
     public get(index: number): T {
         if (index < 0 || index >= this.length) {
@@ -151,13 +153,19 @@ export default class List<T> implements Iterable<T>
      * Returns a new List instance with the elements of the selected range
      * @param indexFrom
      * @param count
+     * @throws RangeError - If `indexFrom` less than 0 or greater then the length of the list.
+     * @throws RangeError - If `count` less than 1 or greater then the length of the list
+     * @throws RangeError - If one or more items in the selected range are outside the bounds of the list
      */
     public getRange(indexFrom: number, count: number): List<T> {
         if (indexFrom < 0 || indexFrom >= this.length) {
             throw new RangeError('Argument "indexFrom" cannot be less than 0 or greater than the length of the list');
         }
-        if (count < 1 || this.length < indexFrom + count) {
-            throw new RangeError('Argument "count" cannot be less than 1 or greater than the length of the list');
+        if (count < 1) {
+            throw new RangeError('Argument "count" cannot be less than 1');
+        }
+        if (this.length < indexFrom + count) {
+            throw new RangeError('The selected range is outside the range of the list');
         }
         let range: T[] = this.items.slice(indexFrom, indexFrom + count);
         return new List<T>(range);
@@ -165,9 +173,24 @@ export default class List<T> implements Iterable<T>
 
 
     /**
+     * Sets a new value for the element at the selected position
+     * @param index
+     * @param value
+     * @throws RangeError - If `index` less than 0 or greater then the length of the list.
+     */
+    public set(index: number, value: T): void {
+        if (index < 0 || index >= this.length) {
+            throw new RangeError('Argument "indexFrom" cannot be less than 0 or greater than the length of the list');
+        }
+        this.items[index] = value;
+    }
+
+
+    /**
      * Inserts an item at the selected position
      * @param position
      * @param item
+     * @throws RangeError - If `position` less than 0 or greater then the length of the list
      */
     public insert(position: number, item: T): void {
         if (position < 0 || position >= this.items.length) {
@@ -181,10 +204,12 @@ export default class List<T> implements Iterable<T>
      * Inserts a range of items at the selected position
      * @param position
      * @param items
+     * @throws RangeError - If `position` less than 0 or greater then the length of the list
+     * @throws RangeError - If `items` is not iterable
      */
     public insertRange(position: number, items: Iterable<T>): void {
         if (position < 0 || position >= this.items.length) {
-            throw new RangeError('Argument "position" cannot be less then 0 ang less then the length of the list');
+            throw new RangeError('Argument "position" cannot be less than 0 ang greater than the length of the list');
         }
         if (!items[Symbol.iterator]) {
             throw new RangeError('Argument "items" must be iterable');
@@ -193,28 +218,158 @@ export default class List<T> implements Iterable<T>
     }
 
 
-    public has(item: T): boolean {
+    /**
+     * Removes the first occurrence of an element in a list.
+     * @param item
+     * @return boolean Returns true if the deletion was successful, false otherwise
+     */
+    public remove(item: T): boolean {
+        let index: number = this.items.indexOf(item);
+        if (index < 0) {
+            return false;
+        }
 
+        let deletedItem: T[] = [];
+        deletedItem = this.items.splice(index, 1);
+        return deletedItem.length === 1;
     }
 
 
-    public remove(item: T): void {
-
-    }
-
-
+    /**
+     * Removes an element by its index
+     * @param index
+     * @throws RangeError- If `index` less than 0 or greater then the length of the list
+     */
     public removeAt(index: number): void {
+        if (index < 0 || index >= this.items.length) {
+            throw new RangeError('Argument "index" cannot be less than 0 ang greater than the length of the list');
+        }
+        this.items.splice(index, 1);
+    }
+
+
+    /**
+     * Removes a range of elements from a list
+     * @param {number} indexFrom
+     * @param {number} count
+     * @throws RangeError - If `indexFrom` less than 0 or greater then the length of the list
+     * @throws RangeError - If `count` less than 1
+     * @throws RangeError - If one or more items in the selected range are outside the bounds of the list
+     */
+    public removeRange(indexFrom: number, count: number): void {
+        if (indexFrom < 0 || indexFrom >= this.items.length) {
+            throw new RangeError('Argument "indexFrom" cannot be less than 0 ang greater than the length of the list');
+        }
+        if (count < 1) {
+            throw new RangeError('Argument "count" cannot be less than 1');
+        }
+        if (this.length < indexFrom + count) {
+            throw new RangeError('One or more items in the selected range are outside the bounds of the list');
+        }
+        this.items.splice(indexFrom, count);
+    }
+
+
+    /**
+     * Removes all the elements that match the conditions defined by the specified predicate
+     * @param match
+     */
+    public removeAll(match: Predicate<T>): void {
+        for (let i: number = 0; i < this.items.length; i++) {
+            if (match(this.items[i])) {
+                this.removeAt(i);
+                i--;
+            }
+        }
+    }
+
+
+    /**
+     * Removes all items in a list
+     */
+    public clear(): void {
+        this.items = [];
+    }
+
+
+    /**
+     * Checks if an element exists in a list
+     * @param item
+     * @return boolean
+     */
+    public has(item: T): boolean {
+        return this.items.includes(item);
+    }
+
+
+    /**
+     * Returns the zero-based index of the first occurrence of a value in the list or in a portion of it
+     * @param item
+     * @param fromIndex
+     * @return number - The first index of the element in the list; -1 if not found
+     */
+    public indexOf(item: T, fromIndex: number | undefined = undefined): number {
+        if (typeof fromIndex === 'number'
+            && (fromIndex < 0 || fromIndex >= this.items.length)
+        ) {
+            throw new RangeError('Argument "fromIndex" cannot be less than 0 ang greater than the length of the list');
+        }
+        return this.items.indexOf(item, fromIndex);
+    }
+
+
+    /**
+     * Returns the zero-based index of the last occurrence of a value in the list or in a portion of it
+     * @param item
+     * @param fromIndex
+     * @return number - The last index of the element in the list; -1 if not found
+     * @throws RangeError - If argument "fromIndex" less than 0 or greater than the length of the list
+     */
+    public lastIndexOf(item: T, fromIndex: number | undefined = undefined): number {
+        if (typeof fromIndex === 'number'
+            && (fromIndex < 0 || fromIndex >= this.items.length)
+        ) {
+            throw new RangeError('Argument "fromIndex" cannot be less than 0 ang greater than the length of the list');
+        }
+        if (fromIndex === undefined) {
+            fromIndex = this.items.length - 1;
+        }
+        return this.items.lastIndexOf(item, fromIndex);
+    }
+
+
+    public find(match: Predicate<T>): T | undefined {
 
     }
 
 
-    public removeRange(index: number, count: number): void {
+    public findLast(match: Predicate<T>): T | undefined {
 
     }
 
 
-    public map<RT>(fn: (item: T) => RT): RT[] {
+    public filter(match: Predicate<T>): List<T> {
 
+    }
+
+
+    public sort(comparator: Comparer<T>): void {
+
+    }
+
+
+    public forEach(): void {
+
+    }
+
+
+    public map<R>(fn: (item: T) => R): List<R> {
+
+    }
+
+
+    public toArray(): T[] {
+        return [...this.items];
     }
 
 
