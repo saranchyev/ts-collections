@@ -338,18 +338,50 @@ export default class List<T> implements Iterable<T>
     }
 
 
+    /**
+     * Returns the first found element in the list that matches the condition.
+     * @param match
+     * @return T|undefined - The first found element in the list or undefined
+     */
     public find(match: Predicate<T>): T | undefined {
-
+        for (let i: number = 0; i < this.items.length; i++) {
+            if (match(this.items[i])) {
+                return this.items[i];
+            }
+        }
+        return undefined;
     }
 
 
+    /**
+     Returns the first found element in the list that matches the condition.
+     * The search is made from the end of the list.
+     * @param match
+     * @return T|undefined - The first found element in the list or undefined
+     */
     public findLast(match: Predicate<T>): T | undefined {
-
+        for (let i: number = this.items.length - 1; i >= 0; i--) {
+            if (match(this.items[i])) {
+                return this.items[i];
+            }
+        }
+        return undefined;
     }
 
 
+    /**
+     * Returns a new list of all found elements that satisfy the condition
+     * @param match
+     * @return List<T> - New list with founded items
+     */
     public filter(match: Predicate<T>): List<T> {
-
+        let matchedItems: List<T> = new List<T>();
+        for (let i: number = 0; i < this.items.length; i++) {
+            if (match(this.items[i])) {
+                matchedItems.add(this.items[i]);
+            }
+        }
+        return matchedItems;
     }
 
 

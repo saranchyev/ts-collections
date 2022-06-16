@@ -451,5 +451,70 @@ mocha.describe('List', () => {
             });
         });
 
+        mocha.describe('find((item: T) => bool)', () => {
+            mocha.it('Returns the first found element in the list that matches the condition', () => {
+                let list = new List([
+                    "foo",
+                    "bar",
+                    "baz",
+                    "foofoo",
+                    "foobar",
+                    "foobaz"
+                ]);
+                assert.equal(list.find(i => /..o/.test(i)), "foo");
+                assert.equal(list.find(i => /.a./.test(i)), "bar");
+                assert.equal(list.find(i => /.az/.test(i)), "baz");
+                assert.equal(list.find(i => /.+b.+/.test(i)), "foobar");
+                assert.equal(list.find(i => /.+b.+z/.test(i)), "foobaz");
+            });
+            mocha.it('Returns undefined if the element is not in the list', () => {
+                let list = new List([1,2,3,4,5]);
+                assert.equal(list.find(i => i === 0), undefined);
+                assert.equal(list.find(i => i === 9), undefined);
+                assert.equal(list.find(i => i * 5 === 999), undefined);
+            });
+        });
+
+        mocha.describe('findLast((item: T) => bool)', () => {
+            mocha.it('Returns the first found element in the list that matches the condition', () => {
+                let list = new List([
+                    "foo",
+                    "bar",
+                    "baz",
+                    "foofoo",
+                    "foobar",
+                    "foobaz"
+                ]);
+                assert.equal(list.findLast(i => /..o/.test(i)), "foobaz", "1");
+                assert.equal(list.findLast(i => /.ar/.test(i)), "foobar", "2");
+                assert.equal(list.findLast(i => /.az/.test(i)), "foobaz", "3");
+                assert.equal(list.findLast(i => /.+b.+/.test(i)), "foobaz", "4");
+                assert.equal(list.findLast(i => /.+b.+z/.test(i)), "foobaz", "5");
+            });
+            mocha.it('Returns undefined if the element is not in the list', () => {
+                let list = new List([1,2,3,4,5]);
+                assert.equal(list.find(i => i === 0), undefined);
+                assert.equal(list.find(i => i === 9), undefined);
+                assert.equal(list.find(i => i * 5 === 999), undefined);
+            });
+        });
+
+        mocha.describe('filter((item: T) => bool)', () => {
+            mocha.it('Returns a new list of all found elements that satisfy the condition', () => {
+                let list: List<string> = new List([
+                    "foo",
+                    "bar",
+                    "baz",
+                    "foofoo",
+                    "foobar",
+                    "foobaz"
+                ]);
+                let filteredList: List<string> = list.filter(i => /..o/.test(i));
+                assert.equal(filteredList.get(0), "foo", "1");
+                assert.equal(filteredList.get(1), "foofoo", "2");
+                assert.equal(filteredList.get(2), "foobar", "3");
+                assert.equal(filteredList.get(3), "foobaz", "4");
+            });
+        });
     });
 });
