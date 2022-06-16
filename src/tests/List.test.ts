@@ -1,7 +1,7 @@
 import * as mocha from 'mocha';
 import assert from 'assert/strict';
 
-import {List} from '../index';
+import {List} from '../lib/index';
 
 mocha.describe('List', () => {
     mocha.describe('Properties', () => {
