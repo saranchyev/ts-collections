@@ -344,12 +344,7 @@ export default class List<T> implements Iterable<T>
      * @return T|undefined - The first found element in the list or undefined
      */
     public find(match: Predicate<T>): T | undefined {
-        for (let i: number = 0; i < this.items.length; i++) {
-            if (match(this.items[i])) {
-                return this.items[i];
-            }
-        }
-        return undefined;
+        return this.items.find(match);
     }
 
 
@@ -360,12 +355,7 @@ export default class List<T> implements Iterable<T>
      * @return T|undefined - The first found element in the list or undefined
      */
     public findLast(match: Predicate<T>): T | undefined {
-        for (let i: number = this.items.length - 1; i >= 0; i--) {
-            if (match(this.items[i])) {
-                return this.items[i];
-            }
-        }
-        return undefined;
+        return this.items.reverse().find(match);
     }
 
 
