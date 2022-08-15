@@ -55,11 +55,11 @@ mocha.describe('List', () => {
             mocha.it('Creates a non-empty class instance if passed an iterable object', () => {
                 let test = <T>(target: List<T>): void => {
                     assert.equal(target.length, 5);
-                    assert.equal(target.get(0), 0);
-                    assert.equal(target.get(1), 1);
-                    assert.equal(target.get(2), 2);
-                    assert.equal(target.get(3), 3);
-                    assert.equal(target.get(4), 4);
+                    assert.equal(target.getAt(0), 0);
+                    assert.equal(target.getAt(1), 1);
+                    assert.equal(target.getAt(2), 2);
+                    assert.equal(target.getAt(3), 3);
+                    assert.equal(target.getAt(4), 4);
                 };
 
                 let list1 = new List<number>([0,1,2,3,4]);
@@ -92,15 +92,15 @@ mocha.describe('List', () => {
             mocha.it('New elements are added to the end of the list', () => {
                 let list = new List();
                 list.addRange([0,1,2]);
-                assert.equal(list.get(0), 0);
-                assert.equal(list.get(1), 1);
-                assert.equal(list.get(2), 2);
+                assert.equal(list.getAt(0), 0);
+                assert.equal(list.getAt(1), 1);
+                assert.equal(list.getAt(2), 2);
                 assert.equal(list.length, 3);
 
                 list.addRange([3,4,5]);
-                assert.equal(list.get(3), 3);
-                assert.equal(list.get(4), 4);
-                assert.equal(list.get(5), 5);
+                assert.equal(list.getAt(3), 3);
+                assert.equal(list.getAt(4), 4);
+                assert.equal(list.getAt(5), 5);
                 assert.equal(list.length, 6);
             });
             mocha.it('Accepts any iterable objects', () => {
@@ -137,18 +137,18 @@ mocha.describe('List', () => {
         mocha.describe('get(index)', () => {
             mocha.it('Returns an element by index', () => {
                 let list = new List<number>([0,1,2,3,4]);
-                assert.equal(list.get(0), 0);
-                assert.equal(list.get(1), 1);
-                assert.equal(list.get(2), 2);
-                assert.equal(list.get(3), 3);
-                assert.equal(list.get(4), 4);
+                assert.equal(list.getAt(0), 0);
+                assert.equal(list.getAt(1), 1);
+                assert.equal(list.getAt(2), 2);
+                assert.equal(list.getAt(3), 3);
+                assert.equal(list.getAt(4), 4);
             });
             mocha.it('Accepts only values from zero to the length of the list, otherwise throws an error', () => {
                 let list = new List<number>([0,1,2,3,4]);
-                assert.throws(() => list.get(-55));
-                assert.throws(() => list.get(-1));
-                assert.throws(() => list.get(5));
-                assert.throws(() => list.get(10));
+                assert.throws(() => list.getAt(-55));
+                assert.throws(() => list.getAt(-1));
+                assert.throws(() => list.getAt(5));
+                assert.throws(() => list.getAt(10));
             });
         });
 
@@ -195,7 +195,7 @@ mocha.describe('List', () => {
             mocha.it('Sets a new value for the element at the selected position', () => {
                 let list = new List([0,0,2,3,4,5]);
                 list.set(1, 1);
-                assert.equal(list.get(1), 1);
+                assert.equal(list.getAt(1), 1);
             });
             mocha.it('Throws an error if argument "list" less than 0 or greater than list length', () => {
                 let list = new List([0,0,2,3,4,5]);
@@ -218,13 +218,13 @@ mocha.describe('List', () => {
             mocha.it('Inserts a new item at the selected position', () => {
                 let list = new List<number>([0,1,2,3,4]);
                 list.insert(3, 999);
-                assert.equal(list.get(0), 0);
-                assert.equal(list.get(3), 999);
-                assert.equal(list.get(5), 4);
+                assert.equal(list.getAt(0), 0);
+                assert.equal(list.getAt(3), 999);
+                assert.equal(list.getAt(5), 4);
 
                 list.insert(5, 777);
-                assert.equal(list.get(5), 777);
-                assert.equal(list.get(6), 4);
+                assert.equal(list.getAt(5), 777);
+                assert.equal(list.getAt(6), 4);
             });
         });
 
@@ -263,17 +263,17 @@ mocha.describe('List', () => {
                 let list = new List([1,0,2,0,3]);
 
                 list.remove(0);
-                assert.equal(list.get(0), 1);
-                assert.equal(list.get(1), 2);
-                assert.equal(list.get(2), 0);
-                assert.equal(list.get(3), 3);
-                assert.throws(() => list.get(4));
+                assert.equal(list.getAt(0), 1);
+                assert.equal(list.getAt(1), 2);
+                assert.equal(list.getAt(2), 0);
+                assert.equal(list.getAt(3), 3);
+                assert.throws(() => list.getAt(4));
 
                 list.remove(0);
-                assert.equal(list.get(0), 1);
-                assert.equal(list.get(1), 2);
-                assert.equal(list.get(2), 3);
-                assert.throws(() => list.get(3));
+                assert.equal(list.getAt(0), 1);
+                assert.equal(list.getAt(1), 2);
+                assert.equal(list.getAt(2), 3);
+                assert.throws(() => list.getAt(3));
             });
             mocha.it('Returns true if the deletion was successful, false otherwise', () => {
                 let list = new List([1,2,3]);
@@ -292,8 +292,8 @@ mocha.describe('List', () => {
                 assert.doesNotThrow(() => list.removeAt(0)); // [1,2,3,4]
                 assert.doesNotThrow(() => list.removeAt(2)); // [1,2,4]
                 assert.doesNotThrow(() => list.removeAt(2)); // [1,2]
-                assert.equal(list.get(0), 1);
-                assert.equal(list.get(1), 2);
+                assert.equal(list.getAt(0), 1);
+                assert.equal(list.getAt(1), 2);
                 assert.equal(list.length, 2);
             });
             mocha.it('Throws an error if the "index" argument is less than 0 or greater than the index of the last item', () => {
@@ -312,12 +312,12 @@ mocha.describe('List', () => {
                 let list = new List([0,1,2,3,4,5,6,7,8,9]);
 
                 list.removeRange(0, 1); // [1,2,3,4,5,6,7,8,9]
-                assert.equal(list.get(0), 1);
+                assert.equal(list.getAt(0), 1);
                 assert.equal(list.length, 9);
 
                 list.removeRange(3, 3); // [1,2,3,7,8,9]
-                assert.equal(list.get(2), 3);
-                assert.equal(list.get(3), 7);
+                assert.equal(list.getAt(2), 3);
+                assert.equal(list.getAt(3), 7);
                 assert.equal(list.length, 6);
 
                 list.removeRange(4, 2); // [1,2,3,7]
@@ -351,12 +351,12 @@ mocha.describe('List', () => {
                 let list = new List([1,1,1,0,1,1,1,0,0,0,1,0,0,1,1]);
                 list.removeAll(item => item === 1);
                 assert.equal(list.length, 6);
-                assert.equal(list.get(0), 0);
-                assert.equal(list.get(1), 0);
-                assert.equal(list.get(2), 0);
-                assert.equal(list.get(3), 0);
-                assert.equal(list.get(4), 0);
-                assert.equal(list.get(5), 0);
+                assert.equal(list.getAt(0), 0);
+                assert.equal(list.getAt(1), 0);
+                assert.equal(list.getAt(2), 0);
+                assert.equal(list.getAt(3), 0);
+                assert.equal(list.getAt(4), 0);
+                assert.equal(list.getAt(5), 0);
             });
         });
 
@@ -365,7 +365,7 @@ mocha.describe('List', () => {
                 let list = new List([1,2,3,4,5]);
                 list.clear();
                 assert.equal(list.length, 0);
-                assert.throws(() => list.get(0));
+                assert.throws(() => list.getAt(0));
             });
         });
 
@@ -510,10 +510,10 @@ mocha.describe('List', () => {
                     "foobaz"
                 ]);
                 let filteredList: List<string> = list.filter(i => /..o/.test(i));
-                assert.equal(filteredList.get(0), "foo", "1");
-                assert.equal(filteredList.get(1), "foofoo", "2");
-                assert.equal(filteredList.get(2), "foobar", "3");
-                assert.equal(filteredList.get(3), "foobaz", "4");
+                assert.equal(filteredList.getAt(0), "foo", "1");
+                assert.equal(filteredList.getAt(1), "foofoo", "2");
+                assert.equal(filteredList.getAt(2), "foobar", "3");
+                assert.equal(filteredList.getAt(3), "foobaz", "4");
             });
         });
     });

@@ -141,7 +141,7 @@ export default class List<T> implements Iterable<T>
      * @param {number} index
      * @throws RangeError - If `index` less than 0 or greater then the length of the list
      */
-    public get(index: number): T {
+    public getAt(index: number): T {
         if (index < 0 || index >= this.length) {
             throw new RangeError('Argument "index" cannot be less than 0 or greater than the length of the list');
         }
