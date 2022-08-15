@@ -139,7 +139,7 @@ export default class List<T> implements Iterable<T>
     /**
      * Get element by index
      * @param {number} index
-     * @throws RangeError - If `index` less than 0 or greater then the length of the list
+     * @throws RangeError - If `index` less than 0 or greater than the length of the list
      */
     public getAt(index: number): T {
         if (index < 0 || index >= this.length) {
@@ -153,8 +153,8 @@ export default class List<T> implements Iterable<T>
      * Returns a new List instance with the elements of the selected range
      * @param indexFrom
      * @param count
-     * @throws RangeError - If `indexFrom` less than 0 or greater then the length of the list.
-     * @throws RangeError - If `count` less than 1 or greater then the length of the list
+     * @throws RangeError - If `indexFrom` less than 0 or greater than the length of the list.
+     * @throws RangeError - If `count` less than 1 or greater than the length of the list
      * @throws RangeError - If one or more items in the selected range are outside the bounds of the list
      */
     public getRange(indexFrom: number, count: number): List<T> {
@@ -176,7 +176,7 @@ export default class List<T> implements Iterable<T>
      * Sets a new value for the element at the selected position
      * @param index
      * @param value
-     * @throws RangeError - If `index` less than 0 or greater then the length of the list.
+     * @throws RangeError - If `index` less than 0 or greater than the length of the list.
      */
     public set(index: number, value: T): void {
         if (index < 0 || index >= this.length) {
@@ -190,7 +190,7 @@ export default class List<T> implements Iterable<T>
      * Inserts an item at the selected position
      * @param position
      * @param item
-     * @throws RangeError - If `position` less than 0 or greater then the length of the list
+     * @throws RangeError - If `position` less than 0 or greater than the length of the list
      */
     public insert(position: number, item: T): void {
         if (position < 0 || position >= this.items.length) {
@@ -204,7 +204,7 @@ export default class List<T> implements Iterable<T>
      * Inserts a range of items at the selected position
      * @param position
      * @param items
-     * @throws RangeError - If `position` less than 0 or greater then the length of the list
+     * @throws RangeError - If `position` less than 0 or greater than the length of the list
      * @throws RangeError - If `items` is not iterable
      */
     public insertRange(position: number, items: Iterable<T>): void {
@@ -238,7 +238,7 @@ export default class List<T> implements Iterable<T>
     /**
      * Removes an element by its index
      * @param index
-     * @throws RangeError- If `index` less than 0 or greater then the length of the list
+     * @throws RangeError- If `index` less than 0 or greater than the length of the list
      */
     public removeAt(index: number): void {
         if (index < 0 || index >= this.items.length) {
@@ -252,7 +252,7 @@ export default class List<T> implements Iterable<T>
      * Removes a range of elements from a list
      * @param {number} indexFrom
      * @param {number} count
-     * @throws RangeError - If `indexFrom` less than 0 or greater then the length of the list
+     * @throws RangeError - If `indexFrom` less than 0 or greater than the length of the list
      * @throws RangeError - If `count` less than 1
      * @throws RangeError - If one or more items in the selected range are outside the bounds of the list
      */
