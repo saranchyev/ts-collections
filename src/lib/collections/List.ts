@@ -6,36 +6,36 @@
  * [v] Count -> length
  *
  * Methods:
- * [v] * Add(item) - Добавляет объект в конец коллекции List<T>.
- * [v] * AddRange(collection) - Добавляет элементы указанной коллекции в конец списка List<T>.
+ * [v] * [add] Add(item) - Добавляет объект в конец коллекции List<T>.
+ * [v] * [addRange] AddRange(collection) - Добавляет элементы указанной коллекции в конец списка List<T>.
  * [ ] * AsReadOnly() - Возвращает для текущей коллекции оболочку ReadOnlyCollection<T>, доступную только для чтения.
  * [ ]   BinarySearch(...) - Использует алгоритм двоичного поиска для нахождения определенного элемента в отсортированном списке List<T> или в его части.
- * [v] * Clear() - Удаляет из коллекции List<T> все элементы.
- * [v] * Contains(item) - Определяет, входит ли элемент в коллекцию List<T>.
- * [ ]   ConvertAll(converter) - Преобразует элементы текущего списка List<T> в другой тип и возвращает список преобразованных элементов.
+ * [v] * [clear] Clear() - Удаляет из коллекции List<T> все элементы.
+ * [v] * [has] Contains(item) - Определяет, входит ли элемент в коллекцию List<T>.
+ * [v] * [map] ConvertAll(converter) - Преобразует элементы текущего списка List<T> в другой тип и возвращает список преобразованных элементов.
  * [ ]   CopyTo(...) - Копирует список List<T> или его часть в массив.
  * [ ]   EnsureCapacity(capacity) - Гарантирует, что емкость этого списка является по крайней мере указанной capacity.
- * [ ] * Exists(predicate) - Определяет, содержит ли List<T> элементы, удовлетворяющие условиям указанного предиката.
- * [ ] * Find(predicate) - Выполняет поиск элемента, удовлетворяющего условиям указанного предиката, и возвращает первое найденное вхождение в пределах всего списка List<T>.
- * [ ] * FindAll(predicate) - Извлекает все элементы, удовлетворяющие условиям указанного предиката.
+ * [v] * [has] Exists(predicate) - Определяет, содержит ли List<T> элементы, удовлетворяющие условиям указанного предиката.
+ * [v] * [find] Find(predicate) - Выполняет поиск элемента, удовлетворяющего условиям указанного предиката, и возвращает первое найденное вхождение в пределах всего списка List<T>.
+ * [v] * [filter] FindAll(predicate) - Извлекает все элементы, удовлетворяющие условиям указанного предиката.
  * [ ] * FindIndex(from, to, predicate) - Выполняет поиск элемента, удовлетворяющего условиям указанного предиката, и возвращает отсчитываемый от нуля индекс первого найденного вхождения в пределах всего списка List<T> или его части.
- * [ ]   FindLast(predicate) - Выполняет поиск элемента, удовлетворяющего условиям указанного предиката, и возвращает последнее найденное вхождение в пределах всего списка List<T>.
+ * [v] * [findLast] FindLast(predicate) - Выполняет поиск элемента, удовлетворяющего условиям указанного предиката, и возвращает последнее найденное вхождение в пределах всего списка List<T>.
  * [ ] * FindLastIndex(from, to, predicate) - Выполняет поиск элемента, удовлетворяющего условиям указанного предиката, и возвращает последнее найденное вхождение в пределах всего списка List<T>.
- * [ ] * ForEach(Action<T>) - Выполняет указанное действие с каждым элементом списка List<T>.
- * [v] * GetRange(from, to) - Создает неполную копию диапазона элементов исходного списка List<T>.
- * [ ] * IndexOf(item, from, to) - Возвращает отсчитываемый от нуля индекс первого вхождения значения в списке List<T> или в его части.
- * [v] * Insert(position, item) - Вставляет элемент в коллекцию List<T> по указанному индексу.
- * [v] * InsertRange(position, items) - Вставляет элементы коллекции в список List<T> в позиции с указанным индексом.
- * [ ] * LastIndexOf(item, from, to) - Возвращает отсчитываемый от нуля индекс последнего вхождения значения в списке List<T> или в его части.
- * [v] * Remove(item) - Удаляет первое вхождение указанного объекта из коллекции List<T>.
- * [v] * RemoveAll(predicate) - Удаляет все элементы, удовлетворяющие условиям указанного предиката.
- * [v] * RemoveAt(index) - Удаляет элемент списка List<T> с указанным индексом.
- * [v] * RemoveRange(index, count) - Удаляет диапазон элементов из списка List<T>.
- * [ ] * Reverse() - Изменяет порядок элементов в списке List<T> или в его части на обратный.
- * [ ] * Sort(comparer, [from, to]) - Сортирует элементы или части элементов в списке List<T> с использованием заданного значения или значения по умолчанию IComparer<T> реализации или предоставленного делегата Comparison<T> для сравнения элементов списка.
- * [ ] * ToArray() - Копирует элементы списка List<T> в новый массив.
+ * [v] * [forEach] ForEach(Action<T>) - Выполняет указанное действие с каждым элементом списка List<T>.
+ * [v] * [getRange] GetRange(from, to) - Создает неполную копию диапазона элементов исходного списка List<T>.
+ * [v] * [indexOf] IndexOf(item, from, to) - Возвращает отсчитываемый от нуля индекс первого вхождения значения в списке List<T> или в его части.
+ * [v] * [insert] Insert(position, item) - Вставляет элемент в коллекцию List<T> по указанному индексу.
+ * [v] * [insertRange] InsertRange(position, items) - Вставляет элементы коллекции в список List<T> в позиции с указанным индексом.
+ * [v] * [lastIndexOf] LastIndexOf(item, from, to) - Возвращает отсчитываемый от нуля индекс последнего вхождения значения в списке List<T> или в его части.
+ * [v] * [remove] Remove(item) - Удаляет первое вхождение указанного объекта из коллекции List<T>.
+ * [v] * [removeAll] RemoveAll(predicate) - Удаляет все элементы, удовлетворяющие условиям указанного предиката.
+ * [v] * [removeAt] RemoveAt(index) - Удаляет элемент списка List<T> с указанным индексом.
+ * [v] * [removeRange] RemoveRange(index, count) - Удаляет диапазон элементов из списка List<T>.
+ * [v] * [reverse] Reverse() - Изменяет порядок элементов в списке List<T> или в его части на обратный.
+ * [v] * [sort] Sort(comparer, [from, to]) - Сортирует элементы или части элементов в списке List<T> с использованием заданного значения или значения по умолчанию IComparer<T> реализации или предоставленного делегата Comparison<T> для сравнения элементов списка.
+ * [v] * [toArray] ToArray() - Копирует элементы списка List<T> в новый массив.
  * [ ]   TrimExcess() - Задает емкость, равную фактическому числу элементов в списке List<T>, если это число меньше порогового значения.
- * [ ] * TrueForAll - Определяет, все ли элементы списка List<T> удовлетворяют условиям указанного предиката.
+ * [v] * [every] TrueForAll - Определяет, все ли элементы списка List<T> удовлетворяют условиям указанного предиката.
  *
  *
  *
@@ -46,45 +46,45 @@
  * [v] * length
  *
  * Methods:
- * [ ] * at(index) - принимает индекс и возвращает элемент массива с данным индексом. В качестве аргумента метод принимает положительные и отрицательные числа. При отрицательном значении отсчёт происходит с конца массива.
+ * [v] * [getAt] at(index) - принимает индекс и возвращает элемент массива с данным индексом. В качестве аргумента метод принимает положительные и отрицательные числа. При отрицательном значении отсчёт происходит с конца массива.
  * [ ]   concat(...arrays) - возвращает новый массив, состоящий из массива, на котором он был вызван, соединённого с другими массивами и/или значениями, переданными в качестве аргументов
  * [ ]   copyWithin(target, start, end) - копирует последовательность элементов массива внутри него в позицию, начинающуюся по индексу target
- * [ ] * entries - возвращает новый объект итератора массива Array Iterator, содержащий пары ключ / значение для каждого индекса в массиве.
- * [ ] * every(predicate) - проверяет, удовлетворяют ли все элементы массива условию, заданному в передаваемой функции. Возвращает true при пустом массиве
- * [ ] * fill(value, [start, [end]]) - заполняет все элементы массива от начального до конечного индексов одним значением.
- * [ ] * filter(predicate) - создаёт новый массив со всеми элементами, прошедшими проверку, задаваемую в передаваемой функции
- * [ ] * find(predicate) - возвращает значение первого найденного в массиве элемента, которое удовлетворяет условию переданному в callback функции.  В противном случае возвращается undefined.
- * [ ] * findIndex(predicate) - возвращает индекс в массиве, если элемент удовлетворяет условию проверяющей функции. В противном случае возвращается -1
+ * [v] * [entries] entries - возвращает новый объект итератора массива Array Iterator, содержащий пары ключ / значение для каждого индекса в массиве.
+ * [v] * [every] every(predicate) - проверяет, удовлетворяют ли все элементы массива условию, заданному в передаваемой функции. Возвращает true при пустом массиве
+ * [v] * [fill] fill(value, [start, [end]]) - заполняет все элементы массива от начального до конечного индексов одним значением.
+ * [v] * [filter] filter(predicate) - создаёт новый массив со всеми элементами, прошедшими проверку, задаваемую в передаваемой функции
+ * [v] * [find] find(predicate) - возвращает значение первого найденного в массиве элемента, которое удовлетворяет условию переданному в callback функции.  В противном случае возвращается undefined.
+ * [v] * [findIndex] findIndex(predicate) - возвращает индекс в массиве, если элемент удовлетворяет условию проверяющей функции. В противном случае возвращается -1
  * [ ]   flat(depth) - возвращает новый массив, в котором все элементы вложенных подмассивов были рекурсивно "подняты" на указанный уровень depth.
  * [ ]   flatMap(predicate) - сначала применяет функцию к каждому элементу, а затем преобразует полученный результат в плоскую структуру и помещает в новый массив
- * [ ] * forEach(predicate) - выполняет указанную функцию один раз для каждого элемента в массиве
- * [v] * from(iterable[, forEachPredicate]) - создаёт новый экземпляр Array из массивоподобного или итерируемого объекта.
+ * [v] * [forEach] forEach(predicate) - выполняет указанную функцию один раз для каждого элемента в массиве
+ * [v] * [constructor] from(iterable[, forEachPredicate]) - создаёт новый экземпляр Array из массивоподобного или итерируемого объекта.
  * [ ]   groupBy(predicate) - возвращает объект, в котором элементы массива сгруппиованны согласно разультату работы предиката
  * [ ]   groupByToMap
- * [v] * includes(item[, fromIndex]) - определяет, содержит ли массив определённый элемент, возвращая в зависимости от этого true или false
- * [ ] * indexOf(item[, fromIndex]) - возвращает первый индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет.
+ * [v] * [has] includes(item[, fromIndex]) - определяет, содержит ли массив определённый элемент, возвращая в зависимости от этого true или false
+ * [v] * [indexOf] indexOf(item[, fromIndex]) - возвращает первый индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет.
  * [ ]   isArray(obj) - возвращает true, если объект является массивом и false, если он массивом не является.
  * [ ] * join(glue) - объединяет все элементы массива (или массивоподобного объекта) в строку
- * [ ] * keys() - возвращает новый итератор массива Array Iterator, содержащий ключи каждого индекса в массиве.
- * [ ] * lastIndexOf(item, fromIndex) - озвращает последний индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет.
- * [ ] * map(predicate) - создаёт новый массив с результатом вызова указанной функции для каждого элемента массива.
+ * [v] * [keys] keys() - возвращает новый итератор массива Array Iterator, содержащий ключи каждого индекса в массиве.
+ * [v] * [lastIndexOf] lastIndexOf(item, fromIndex) - озвращает последний индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет.
+ * [v] * [map] map(predicate) - создаёт новый массив с результатом вызова указанной функции для каждого элемента массива.
  * [ ]   of(...items) - создаёт новый экземпляр массива Array из произвольного числа аргументов, вне зависимости от числа или типа аргумента
  * [ ]   pop
  * [ ]   push
  * [ ] * reduce
  * [ ] * reduceRight
- * [ ] * reverse
+ * [v] * [reverse] reverse
  * [ ]   shift
  * [ ]   slice
  * [ ] * some
- * [ ] * sort
+ * [v] * [sort] sort
  * [ ]   splice
  * [ ]   toLocaleString
  * [ ]   toSource
  * [ ] * toString
  * [ ]   unshift
- * [ ] * values
- * [ ] * @@iterator
+ * [v] * [values] values
+ * [v] * @@iterator
  * [ ]   @@toPrimitive
  */
 
@@ -104,6 +104,11 @@ export default class List<T> implements Iterable<T>
     }
 
 
+    public get [Symbol.toStringTag]() {
+        return 'List';
+    }
+
+
     /**
      * Create new list
      * @constructor
@@ -111,6 +116,11 @@ export default class List<T> implements Iterable<T>
      */
     public constructor(iterable: Iterable<T> = []) {
         this.items = [...iterable];
+    }
+
+
+    public fill(element: T, start?: number, end?: number): void {
+
     }
 
 
@@ -229,8 +239,7 @@ export default class List<T> implements Iterable<T>
             return false;
         }
 
-        let deletedItem: T[] = [];
-        deletedItem = this.items.splice(index, 1);
+        let deletedItem: T[] = this.items.splice(index, 1);
         return deletedItem.length === 1;
     }
 
@@ -359,6 +368,16 @@ export default class List<T> implements Iterable<T>
     }
 
 
+    public findIndex(match: Predicate<T>): number {
+
+    }
+
+
+    public findLastIndex(match: Predicate<T>): number {
+
+    }
+
+
     /**
      * Returns a new list of all found elements that satisfy the condition
      * @param match
@@ -375,17 +394,49 @@ export default class List<T> implements Iterable<T>
     }
 
 
-    public sort(comparator: Comparer<T>): void {
-
+    public sort(comparator?: Comparer<T>): List<T> {
+        return new List<T>(this.items.sort(comparator));
     }
 
 
-    public forEach(): void {
-
+    public forEach(action: (item: T, index: number) => void): void {
+        this.items.forEach(action);
     }
 
 
     public map<R>(fn: (item: T) => R): List<R> {
+        let newList: List<R> = new List<R>();
+        this.items.forEach(i => newList.add(fn(i)));
+        return newList;
+    }
+
+
+    public reduce(): void {
+
+    }
+
+
+    public reduceRight(): void {
+
+    }
+
+
+    public reverse(): List<T> {
+
+    }
+
+
+    public some(predicate: Predicate<T>): boolean {
+
+    }
+
+
+    public every(predicate: Predicate<T>): boolean {
+
+    }
+
+
+    public binarySearch(item: T, comparer?: Comparer<T>): number {
 
     }
 
@@ -395,12 +446,36 @@ export default class List<T> implements Iterable<T>
     }
 
 
-    public [Symbol.iterator](): Iterator<T> {
-        return undefined;
+    public * keys(): Generator<number> {
+        for (let i: number = 0; i < this.items.length; i++) {
+            yield i;
+        }
+    }
+
+
+    public * values(): Generator<T> {
+        for (let i: number = 0; i < this.items.length; i++) {
+            yield this.items[i];
+        }
+    }
+
+
+    public * entries(): Generator<[number, T]> {
+        for (let i: number = 0; i < this.items.length; i++) {
+            yield [i, this.items[i]];
+        }
+    }
+
+
+    public [Symbol.iterator](): Generator<T> {
+        return this.values();
+    }
+
+
+    public [Symbol.toPrimitive](hint: string): string | null {
+        if (hint === 'string') {
+            return this.items.join();
+        }
+        return null;
     }
 }
-
-
-
-
-

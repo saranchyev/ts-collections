@@ -516,5 +516,9 @@ mocha.describe('List', () => {
                 assert.equal(filteredList.getAt(3), "foobaz", "4");
             });
         });
+
+        mocha.describe('sort()', () => {
+
+        })
     });
 });
